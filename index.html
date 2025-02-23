@@ -44,13 +44,12 @@
 </div>
 
     <script>
-        $("input").click(function(event){
-            var target = event.currentTarget
-            var category = $("target")
-            $("#content").attr("src", "category_01/" + target.id + "/" + target.id + ".txt")
-        })
-
-        
+    $("input").click(function(event){
+        var target = event.currentTarget;
+        var category = $(target).closest(".category").attr("id"); 
+        $("#content").attr("src", category + "/" + target.id + "/" + target.id + ".txt"); 
+    });
+            
     </script>
 </body>
 </html>
